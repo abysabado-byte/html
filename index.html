@@ -4,12 +4,17 @@
 <head>
 	<title>Jenner's Omni Kicks Homepage</title>
 	<meta name="description" content="Jenner's Omni Kicks, sapatos na DA BEST">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		:root {
 			--accent-1: #00c6ff;
 			--accent-2: #0072ff;
 			--panel-bg: rgba(0, 0, 0, 0.36);
 			--panel-border: rgba(255, 255, 255, 0.08);
+		}
+
+		*, *::before, *::after {
+			box-sizing: border-box;
 		}
 
 		html, body {
@@ -24,6 +29,7 @@
 
 		.container {
 			max-width: 980px;
+			width: calc(100% - 4rem);
 			margin: 3rem auto;
 			padding: 2rem;
 			background: var(--panel-bg);
@@ -35,14 +41,15 @@
 
 		h1 {
 			margin: 0 0 1rem 0;
-			font-size: 2.1rem;
+			font-size: clamp(1.4rem, 4vw, 2.1rem);
 			letter-spacing: 0.4px;
 		}
 
 		img.brand {
 			display: block;
 			width: 100%;
-			max-height: 400px;
+			height: auto;
+			max-height: 60vh;
 			object-fit: cover;
 			border-radius: 8px;
 			border: 1px solid rgba(255,255,255,0.06);
@@ -76,10 +83,18 @@
 			.container {
 				margin: 1rem;
 				padding: 1rem;
+				width: calc(100% - 2rem);
 			}
 
 			h1 {
 				font-size: 1.6rem;
+			}
+
+			.link-button {
+				display: block;
+				width: 100%;
+				text-align: center;
+				padding: 0.85rem 1rem;
 			}
 		}
 	</style>
@@ -87,7 +102,7 @@
 <body>
 	<div class="container">
 		<h1>Jenner's Omni Kicks</h1>
-		<img class="brand" src="image1.png" width="700" height="400" alt="Jenner's Sapatos">
+		<img class="brand" src="image1.png" alt="Jenner's Sapatos">
 		<section>
 			<h2>Sapatos para sa LAHAT</h2>
 			<p>Quality shoes blend durable materials, precise construction, and an accurate fit to deliver lasting comfort, support, and style. Crafted from high-grade leathers, performance synthetics, or tightly woven fabrics with reinforced stitching, reliable soles, and ergonomic footbeds, they protect your feet, improve posture, and stand up to daily wear. Investing in quality footwear means fewer replacements, better long‑term comfort, and a cleaner, more professional appearance.</p>
