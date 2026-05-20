@@ -3,14 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>On Cloud Surfer � Shoes</title>
+	<title>On Cloud Surfer — Shoes</title>
 	<style>
-		body {
+		:root {
+			--bg-1: #a8edea;
+			--bg-2: #fed6e3;
+			--card-bg: rgba(255,255,255,0.9);
+			--accent: #0b84ff;
+			--muted: #444;
+		}
+
+		html, body {
 			min-height: 100vh;
 			margin: 0;
 			font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-			/* Background gradient */
-			background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+			background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
 			color: #111;
 			display: flex;
 			flex-direction: column;
@@ -28,38 +35,170 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			padding: 1rem;
 		}
 
-		section {
-			text-align: center;
-			padding: 2rem;
-			backdrop-filter: blur(4px);
-		}
-
-		.brand {
+		.container {
+			width: 100%;
+			max-width: 1100px;
+			padding: 1rem;
+			background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.7));
 			border-radius: 12px;
-			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+			box-shadow: 0 12px 40px rgba(0,0,0,0.08);
 		}
+
+		header.page-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 1.25rem;
+			color: var(--muted);
+		}
+
+		.products {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			gap: 1rem;
+			align-items: start;
+		}
+
+		.product {
+			background: var(--card-bg);
+			border-radius: 10px;
+			padding: 0.75rem;
+			text-align: center;
+			box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+		}
+
+			.product img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+				border-radius: 8px;
+				display: block;
+				margin-bottom: 0.5rem;
+			}
+
+			.product h3 {
+				margin: 0.25rem 0;
+				font-size: 1rem;
+				color: #071428;
+			}
+
+		.price {
+			color: #0b6b4f;
+			font-weight: 600;
+			margin-bottom: 0.5rem;
+		}
+
 	</style>
 </head>
 <body>
 	<a href="index.html">Home</a>
 	<main>
-		<section>
-			<h2>On Cloud Surfer ( Php 2,500.00 )</h2>
-			<img class="brand" src="oc.jpg" alt="On Cloud Surfer shoe" width="300" height="300">
-			<img class="brand" src="oc1.png" alt="On Cloud Surfer shoe" width="300" height="300">
-			<h2>Golden Goose ( Php 3,000.00 )</h2>
-			<img class="brand" src="gg1.png" alt="Golden Goose shoe" width="300" height="300">
-			<img class="brand" src="gg2.png" alt="Golden Goose shoe" width="300" height="300">
-			<h2>Onitsuka Tiger ( Php 3,000.00 )</h2>
-			<img class="brand" src="oni1.png" alt="Onitsuka Tiger shoe" width="300" height="300">
-			<img class="brand" src="oni2.png" alt="Onitsuka Tiger shoe" width="300" height="300">
-			<h2>Asics Pickle Ball ( Php 3,000.00 )</h2>
-			<img class="brand" src="apb1.png" alt="Asics Pickle Ball shoe" width="300" height="300">
-			<img class="brand" src="apb2.png" alt="Asics Pickle Ball shoe" width="300" height="300">
+		<div class="container" role="main">
+			<header class="page-header">
+				<h1>Available Shoes</h1>
+				<div class="contact" aria-label="Contact for orders">
+						<span>For orders DM 0995-3970640</span>
+				</div>
+			</header>
 
-		</section>
+			<section class="products" aria-label="Product list">
+				<article class="product" data-id="oc" data-name="On Cloud Surfer" data-price="2500">
+					<img src="oc.jpg" alt="On Cloud Surfer shoe">
+					<img src="oc1.png" alt="On Cloud Surfer shoe">
+					<h3>On Cloud Surfer</h3>
+					<div class="price">Php 2,500.00</div>
+				</article>
+
+				<article class="product" data-id="gg" data-name="Golden Goose" data-price="3000">
+					<img src="gg1.png" alt="Golden Goose shoe">
+					<img src="gg2.png" alt="Golden Goose shoe">
+					<h3>Golden Goose</h3>
+					<div class="price">Php 3,000.00</div>
+				</article>
+
+				<article class="product" data-id="oni" data-name="Onitsuka Tiger" data-price="3000">
+					<img src="oni1.png" alt="Onitsuka Tiger shoe">
+					<img src="oni2.png" alt="Onitsuka Tiger shoe">
+					<h3>Onitsuka Tiger</h3>
+					<div class="price">Php 3,000.00</div>
+				</article>
+
+				<article class="product" data-id="apb" data-name="Asics Pickle Ball" data-price="3000">
+					<img src="apb1.png" alt="Asics Pickle Ball shoe">
+					<img src="apb2.png" alt="Asics Pickle Ball shoe">
+					<h3>Asics Pickle Ball</h3>
+					<div class="price">Php 3,000.00</div>
+				</article>
+
+				<article class="product" data-id="mind" data-name="Nike Mind 001" data-price="3000">
+					<img src="mindblack1.png" alt="Nike Mind 001 shoe">
+					<img src="mindblack2.png" alt="Nike Mind 001 shoe">
+					<h3>Nike Mind 001 Black/Orange</h3>
+					<div class="price">Php 3,000.00</div>
+				</article>
+
+				<article class="product" data-id="mind" data-name="Nike Mind 001" data-price="3000">
+					<img src="mindgray.jpg" alt="Nike Mind 001 shoe">
+					<img src="mindgray2.jpg" alt="Nike Mind 001 shoe">
+					<h3>Nike Mind 001 Silver/Orange</h3>
+					<div class="price">Php 3,000.00</div>
+				</article>
+
+				<article class="product" data-id="mind" data-name="Nike Mind 001" data-price="3000">
+					<img src="mindred1.jpg" alt="Nike Mind 001 shoe">
+					<img src="mindred2.jpg" alt="Nike Mind 001 shoe">
+					<h3>Nike Mind 001 Red/Orange</h3>
+					<div class="price">Php 3,000.00</div>
+				</article>
+
+				<article class="product" data-id="vapor" data-name="Vapor Fly 4" data-price="2500">
+					<img src="vapor1.jpg" alt="Vapor Fly 4 shoe">
+					<img src="vapor2.jpg" alt="Vapor Fly 4 shoe">
+					<h3>Vapor Fly 4</h3>
+					<div class="price">Php 2,500.00</div>
+				</article>
+
+				<article class="product" data-id="adizero" data-name="Adizero Adios Pro4" data-price="2500">
+					<img src="adizero1.jpg" alt="Adizero Adios Pro4 shoe">
+					<img src="adizero2.jpg" alt="Adizero Adios Pro4 shoe">
+					<h3>Adizero Adios Pro4</h3>
+					<div class="price">Php 2,500.00</div>
+				</article>
+
+				<article class="product" data-id="vomero" data-name="Vomero 18" data-price="2500">
+					<img src="vomero1.jpg" alt="Vomero 18 shoe">
+					<img src="vomero2.jpg" alt="Vomero 18 shoe">
+					<h3>Vomero 18</h3>
+					<div class="price">Php 2,500.00</div>
+				</article>
+
+				<article class="product" data-id="kobe4" data-name="Kobe 4 Protro" data-price="2500">
+					<img src="kobe4a.jpg" alt="Kobe 4 Protro shoe">
+					<img src="kobe4b.jpg" alt="Kobe 4 Protro shoe">
+					<h3>Kobe 4 Protro</h3>
+					<div class="price">Php 2,500.00</div>
+				</article>
+
+				<article class="product" data-id="jamorant3" data-name="Ja Morant 3" data-price="2500">
+					<img src="morant3a.jpg" alt="Ja Morant 3 shoe">
+					<img src="morant3b.jpg" alt="Ja Morant 3 shoe">
+					<h3>Ja Morant 3</h3>
+					<div class="price">Php 2,500.00</div>
+				</article>
+
+			</section>
+		</div>
 	</main>
+
+
 </body>
 </html>
