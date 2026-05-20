@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Jenner's Omni Kicks Homepage</title>
+	<meta name="description" content="Jenner's Omni Kicks, sapatos na DA BEST">
+	<style>
+		:root {
+			--accent-1: #00c6ff;
+			--accent-2: #0072ff;
+			--panel-bg: rgba(0, 0, 0, 0.36);
+			--panel-border: rgba(255, 255, 255, 0.08);
+		}
+
+		html, body {
+			height: 100%;
+			margin: 0;
+			font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+			color: #fff;
+			background: linear-gradient(135deg, var(--accent-2) 0%, #1b2735 45%, #0f2027 100%), repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 40px);
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.container {
+			max-width: 980px;
+			margin: 3rem auto;
+			padding: 2rem;
+			background: var(--panel-bg);
+			border: 1px solid var(--panel-border);
+			border-radius: 12px;
+			box-shadow: 0 10px 40px rgba(2,6,23,0.6);
+			backdrop-filter: blur(6px);
+		}
+
+		h1 {
+			margin: 0 0 1rem 0;
+			font-size: 2.1rem;
+			letter-spacing: 0.4px;
+		}
+
+		img.brand {
+			display: block;
+			width: 100%;
+			max-height: 400px;
+			object-fit: cover;
+			border-radius: 8px;
+			border: 1px solid rgba(255,255,255,0.06);
+			margin-bottom: 1.25rem;
+			box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+		}
+
+		section h2 {
+			margin-top: 0;
+			color: #e6f7ff;
+		}
+
+		p {
+			line-height: 1.5;
+			color: #e6eef5;
+		}
+
+		.link-button {
+			display: inline-block;
+			margin-top: 1.25rem;
+			padding: 0.6rem 1rem;
+			background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+			color: #00121a;
+			text-decoration: none;
+			border-radius: 8px;
+			font-weight: 600;
+			box-shadow: 0 6px 14px rgba(0,114,255,0.18);
+		}
+
+		@media (max-width: 600px) {
+			.container {
+				margin: 1rem;
+				padding: 1rem;
+			}
+
+			h1 {
+				font-size: 1.6rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Jenner's Omni Kicks</h1>
+		<img class="brand" src="image1.png" width="700" height="400" alt="Jenner's Sapatos">
+		<section>
+			<h2>Sapatos para sa LAHAT</h2>
+			<p>Quality shoes blend durable materials, precise construction, and an accurate fit to deliver lasting comfort, support, and style. Crafted from high-grade leathers, performance synthetics, or tightly woven fabrics with reinforced stitching, reliable soles, and ergonomic footbeds, they protect your feet, improve posture, and stand up to daily wear. Investing in quality footwear means fewer replacements, better long‑term comfort, and a cleaner, more professional appearance.</p>
+			<p>Subtly hinting all-ages, all-sports kicks.</p>
+		</section>
+		<a class="link-button" href="shoes.html">View all shoes</a>
+	</div>
+</body>
+</html>
